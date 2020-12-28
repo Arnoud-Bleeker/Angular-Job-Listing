@@ -1,0 +1,10 @@
+<div class="filter-card">
+    <div class="filter-labels" >
+        <div class="filter-label" *ngFor="let filter of filters">
+            <span class="label filter-label-name">{{filter}}</span>
+            <span class="filter-label-close" (click)="clearFilter(filter)"></span>
+        </div>
+        <span class="filter-clear" (click)="clearFilter('all')">Clear</span>
+    </div>
+</div>
+

@@ -1,0 +1,4 @@
+<app-filter [filters]="Filters" (clear)="updateFilter($event)" class="filter"></app-filter>
+<div class="dashboard" *ngFor="let job of Jobs">
+    <app-job [job]="job" (label)="addLabel($event)"></app-job>
+</div>

@@ -1,0 +1,26 @@
+<div class="job-card" *ngIf="job">
+    <div class="job-image">
+        <img src="../assets/{{job.logo}}" alt="logo">
+    </div>
+    <div class="job-info">
+        <div class="job-info-company">
+            <h1>{{job.company}}</h1>
+            <span class="job-info-new" *ngIf="job.new">NEW!</span>
+            <span class="job-info-featured" *ngIf="job.featured">FEATURED</span>
+        </div>
+        <div class="job-info-position">
+            <h2>{{job.position}}</h2>
+        </div>
+        <div class="job-info-extra">
+            <p>{{job.postedAt}}</p>
+            <p>&#183;</p>
+            <p>{{job.contract}}</p>
+            <p>&#183;</p>
+            <p>{{job.location}}</p>
+        </div>
+    </div>
+    <div class="job-labels" >
+        <span class="label job-label" *ngFor="let label of labels" (click)="filter(label)">{{label}}</span>
+    </div>
+</div>
+
